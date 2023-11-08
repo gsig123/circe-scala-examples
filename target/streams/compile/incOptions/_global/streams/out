@@ -1,12 +1,38 @@
 [0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /Users/bis/talks/scala_json/how-to-json-in-scala/target/scala-2.13/classes.bak[0m
 [0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$Qux.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedEncoder$macro$13$1$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$Bar$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$Bar.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedDecoder$macro$27$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedEncoder$macro$13$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$Foo.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedDecoder$macro$27$1$$anon$5.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedDecoder$macro$27$1$$anon$6.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$Qux$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedEncoder$macro$13$1$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedDecoder$macro$27$1$$anon$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedEncoder$macro$13$1$$anon$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$Qux.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedEncoder$macro$13$1$$anon$3.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$Bar$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$Bar.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedDecoder$macro$27$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedEncoder$macro$13$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$Foo.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedDecoder$macro$27$1$$anon$5.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedDecoder$macro$27$1$$anon$6.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$Qux$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedEncoder$macro$13$1$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedDecoder$macro$27$1$$anon$4.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedEncoder$macro$13$1$$anon$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main$Qux.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedEncoder$macro$13$1$$anon$3.class[0m

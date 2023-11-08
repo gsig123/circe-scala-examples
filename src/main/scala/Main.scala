@@ -10,10 +10,14 @@ object Main extends App {
   val foo: Foo = Qux(13, Some(14.00))
   val json = foo.asJson.noSpaces
 
-  println(json)
+  println("\n\n\n")
+  println("\n\n\n")
+
+  println(s"JSON: $json \n")
 
   val decodedFoo = decode[Foo](json)
-  println(decodedFoo)
+  println(s"Scala case class: $decodedFoo \n")
 
+  println("\n\n\n")
 
 }
