@@ -1,26 +1,36 @@
-import io.circe.generic.auto._
+import io.circe.{Encoder, Decoder}
+import io.circe.generic.semiauto.{deriveEncoder, deriveDecoder}
 import io.circe.syntax._
 import io.circe.parser._
 
-
 object Main extends App {
-
   // Define some case classes
-  case class Address(street: String, city: String)
-  case class Person(name: String, age: Int, address: Address)
+  case class Item(name: String, price: Double)
+  case class Order(items: List[Item], total: Double)
 
-  // Create an instance of Person
-  val person = Person("Bjartur", 29, Address("Ørestads Boulevard", "Copenhagen"))
+  // Semi-automatic derivation of encoders and decoders
+  implicit val itemEncoder: Encoder[Item] = deriveEncoder[Item]
+  implicit val itemDecoder: Decoder[Item] = deriveDecoder[Item]
+  
+  implicit val orderEncoder: Encoder[Order] = deriveEncoder[Order]
+  implicit val orderDecoder: Decoder[Order] = deriveDecoder[Order]
 
-  // Automatically Encode the Person instance to JSON
-  val json = person.asJson
-  println("\nJSON:")
-  println(s"\n$json \n")
+  // Now we can encode and decode using those codecs
+  val order = Order(List(Item("Widget", 99.95)), 99.95)
 
+  // Encoding order to JSON string
+  val jsonString: String = order.asJson.toString()
+  println("\n\nJSON:")
+  println(s"$jsonString\n")
 
-  val jsonString: String = """{"name": "Anders", "age": 19, "address": {"street": "Country road", "city": "Bogø"}}"""
-  val decodedPerson = decode[Person](jsonString)
-  println("\nCase class:")
-  println(s"\n$decodedPerson\n")
+  // Decoding JSON back to Order
+  val decodedOrder = decode[Order](jsonString)
+  println("\n\nDecoded:")
+  decodedOrder match {
+    case Right(order) => println(s"Decoded order: $order")
+    case Left(error) => println(s"Failed to decode: $error")
+  }
+  println("\n\n")
+
 
 }

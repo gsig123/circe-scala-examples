@@ -1,0 +1,63 @@
+java.lang.ArrayIndexOutOfBoundsException: Index 12 out of bounds for length 12
+occurred in the presentation compiler.
+
+action parameters:
+offset: 238
+uri: file://<WORKSPACE>/src/main/scala/Main.scala
+text:
+import io.circe.{Encoder, Decoder}
+import io.circe.generic.semiauto.{deriveEncoder, deriveDecoder}
+import io.circe.syntax._
+import io.circe.parser._
+
+object Main extends App {
+  // Define some case classes
+  case class Item(name: String, @@)
+
+}
+
+
+error stacktrace:
+scala.reflect.internal.util.BatchSourceFile.findLine$1(SourceFile.scala:218)
+	scala.reflect.internal.util.BatchSourceFile.offsetToLine(SourceFile.scala:221)
+	scala.meta.internal.pc.MetalsGlobal$XtensionPositionMetals.toPos(MetalsGlobal.scala:668)
+	scala.meta.internal.pc.MetalsGlobal$XtensionPositionMetals.toLsp(MetalsGlobal.scala:681)
+	scala.meta.internal.pc.PcDocumentHighlightProvider.collect(PcDocumentHighlightProvider.scala:20)
+	scala.meta.internal.pc.PcDocumentHighlightProvider.collect(PcDocumentHighlightProvider.scala:8)
+	scala.meta.internal.pc.PcCollector.scala$meta$internal$pc$PcCollector$$collect$1(PcCollector.scala:292)
+	scala.meta.internal.pc.PcCollector.traverseWithParent$1(PcCollector.scala:337)
+	scala.meta.internal.pc.PcCollector.$anonfun$traverseSought$1(PcCollector.scala:288)
+	scala.meta.internal.pc.PcCollector.$anonfun$traverseSought$19(PcCollector.scala:469)
+	scala.collection.LinearSeqOps.foldLeft(LinearSeq.scala:169)
+	scala.collection.LinearSeqOps.foldLeft$(LinearSeq.scala:165)
+	scala.collection.immutable.List.foldLeft(List.scala:79)
+	scala.meta.internal.pc.PcCollector.traverseWithParent$1(PcCollector.scala:469)
+	scala.meta.internal.pc.PcCollector.$anonfun$traverseSought$1(PcCollector.scala:288)
+	scala.meta.internal.pc.PcCollector.$anonfun$traverseSought$10(PcCollector.scala:409)
+	scala.collection.LinearSeqOps.foldLeft(LinearSeq.scala:169)
+	scala.collection.LinearSeqOps.foldLeft$(LinearSeq.scala:165)
+	scala.collection.immutable.List.foldLeft(List.scala:79)
+	scala.meta.internal.pc.PcCollector.traverseWithParent$1(PcCollector.scala:409)
+	scala.meta.internal.pc.PcCollector.$anonfun$traverseSought$1(PcCollector.scala:288)
+	scala.meta.internal.pc.PcCollector.$anonfun$traverseSought$19(PcCollector.scala:469)
+	scala.collection.LinearSeqOps.foldLeft(LinearSeq.scala:169)
+	scala.collection.LinearSeqOps.foldLeft$(LinearSeq.scala:165)
+	scala.collection.immutable.List.foldLeft(List.scala:79)
+	scala.meta.internal.pc.PcCollector.traverseWithParent$1(PcCollector.scala:469)
+	scala.meta.internal.pc.PcCollector.$anonfun$traverseSought$1(PcCollector.scala:288)
+	scala.meta.internal.pc.PcCollector.$anonfun$traverseSought$10(PcCollector.scala:409)
+	scala.collection.LinearSeqOps.foldLeft(LinearSeq.scala:169)
+	scala.collection.LinearSeqOps.foldLeft$(LinearSeq.scala:165)
+	scala.collection.immutable.List.foldLeft(List.scala:79)
+	scala.meta.internal.pc.PcCollector.traverseWithParent$1(PcCollector.scala:409)
+	scala.meta.internal.pc.PcCollector.$anonfun$traverseSought$1(PcCollector.scala:288)
+	scala.meta.internal.pc.PcCollector.$anonfun$traverseSought$10(PcCollector.scala:409)
+	scala.collection.LinearSeqOps.foldLeft(LinearSeq.scala:169)
+	scala.collection.LinearSeqOps.foldLeft$(LinearSeq.scala:165)
+	scala.collection.immutable.List.foldLeft(List.scala:79)
+	scala.meta.internal.pc.PcCollector.traverseWithParent$1(PcCollector.scala:409)
+	scala.meta.internal.pc.PcCollector.traverseSought(PcCollector.scala:472)
+	scala.meta.internal.pc.PcCollector.resultWithSought(PcCollector.scala:266)
+	scala.meta.internal.pc.PcCollector.result(PcCollector.scala:207)
+	scala.meta.internal.pc.PcDocumentHighlightProvider.highlights(PcDocumentHighlightProvider.scala:29)
+	scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$documentHighlight$1(ScalaPresentationCompiler.scala:334)
