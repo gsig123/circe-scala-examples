@@ -1,0 +1,4 @@
+[debug] [how-to-json-in-scala-test] Classpath dependencies List()
+[debug] [how-to-json-in-scala-test] Dependencies from configurations List(how-to-json-in-scala)
+[debug] Bloop wrote the configuration of project 'how-to-json-in-scala-test' to '/Users/bis/talks/scala_json/how-to-json-in-scala/.bloop/how-to-json-in-scala-test.json'
+[success] Generated .bloop/how-to-json-in-scala-test.json
