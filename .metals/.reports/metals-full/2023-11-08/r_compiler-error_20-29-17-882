@@ -1,0 +1,33 @@
+java.lang.AssertionError: assertion failed: file://<WORKSPACE>/src/main/scala/Main.scala: 455 >= 455
+occurred in the presentation compiler.
+
+action parameters:
+offset: 455
+uri: file://<WORKSPACE>/src/main/scala/Main.scala
+text:
+import io.circe._
+import io.circe.parser._
+
+object Main extends App {
+  val jsonStr = """{ "name": "John", "age": "thirty" }"""
+
+  val decoded = decode[Person](jsonStr) match {
+    case Right(person) => println(s"Decoded person: $person")
+    case Left(error) =>
+      error match {
+        case DecodingFailure(reason, history) =>
+          println(s"Failed to decode: $reason")
+          history.foreach(op => println(s"Operation: $op"))
+      }
+  }
+
+}
+@@
+
+
+error stacktrace:
+scala.reflect.internal.util.SourceFile.position(SourceFile.scala:32)
+	scala.tools.nsc.CompilationUnits$CompilationUnit.position(CompilationUnits.scala:135)
+	scala.meta.internal.pc.PcCollector.<init>(PcCollector.scala:26)
+	scala.meta.internal.pc.PcDocumentHighlightProvider.<init>(PcDocumentHighlightProvider.scala:11)
+	scala.meta.internal.pc.ScalaPresentationCompiler.$anonfun$documentHighlight$1(ScalaPresentationCompiler.scala:334)

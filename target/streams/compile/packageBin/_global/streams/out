@@ -2,16 +2,16 @@
 [0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/bis/talks/scala_json/how-to-json-in-scala/target/scala-2.13/classes/Main$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Main$User.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/bis/talks/scala_json/how-to-json-in-scala/target/scala-2.13/classes/Main$User.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Main$User$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/bis/talks/scala_json/how-to-json-in-scala/target/scala-2.13/classes/Main$User$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Main$$anon$1.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/bis/talks/scala_json/how-to-json-in-scala/target/scala-2.13/classes/Main$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedDecoder$macro$7$1$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/bis/talks/scala_json/how-to-json-in-scala/target/scala-2.13/classes/Main$anon$importedDecoder$macro$7$1$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$anon$importedDecoder$macro$7$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/bis/talks/scala_json/how-to-json-in-scala/target/scala-2.13/classes/Main$anon$importedDecoder$macro$7$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$Person.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/bis/talks/scala_json/how-to-json-in-scala/target/scala-2.13/classes/Main$Person.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/bis/talks/scala_json/how-to-json-in-scala/target/scala-2.13/classes/Main.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Main$delayedInit$body.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /Users/bis/talks/scala_json/how-to-json-in-scala/target/scala-2.13/classes/Main$delayedInit$body.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Main$$anon$2.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /Users/bis/talks/scala_json/how-to-json-in-scala/target/scala-2.13/classes/Main$$anon$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Main$Person$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/bis/talks/scala_json/how-to-json-in-scala/target/scala-2.13/classes/Main$Person$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
