@@ -1,36 +1,47 @@
-import io.circe.{Encoder, Decoder}
-import io.circe.generic.semiauto.{deriveEncoder, deriveDecoder}
+import io.circe._
+import io.circe.generic.semiauto._
 import io.circe.syntax._
 import io.circe.parser._
 
+
 object Main extends App {
-  // Define some case classes
-  case class Item(name: String, price: Double)
-  case class Order(items: List[Item], total: Double)
+  // Define a case class
+  case class User(id: Int, username: String, email: String)
 
-  // Semi-automatic derivation of encoders and decoders
-  implicit val itemEncoder: Encoder[Item] = deriveEncoder[Item]
-  implicit val itemDecoder: Decoder[Item] = deriveDecoder[Item]
-  
-  implicit val orderEncoder: Encoder[Order] = deriveEncoder[Order]
-  implicit val orderDecoder: Decoder[Order] = deriveDecoder[Order]
+  // Let's create a custom encoder for User that only includes id and username
+  implicit val encodeUser: Encoder[User] = new Encoder[User] {
+    final def apply(u: User): Json = Json.obj(
+        ("id", Json.fromInt(u.id)),
+        ("username", Json.fromString(u.username))
+        // We're omitting the email field on purpose
+      ) 
+  }
 
-  // Now we can encode and decode using those codecs
-  val order = Order(List(Item("Widget", 99.95)), 99.95)
+  // Similarly, create a custom decoder that provides a default email if it's missing
+  implicit val decodeUser: Decoder[User] = new Decoder[User] {
+    final def apply(c: HCursor): Decoder.Result[User] = for {
+      id <- c.downField("id").as[Int]
+      username <- c.downField("username").as[String]
+      // Assume email is optional in the JSON and provide a default
+      email <- c.downField("email").as[Option[String]].map(_.getOrElse("default@email.com"))
+    } yield {
+      User(id, username, email)
+    }
+  }
 
-  // Encoding order to JSON string
-  val jsonString: String = order.asJson.toString()
-  println("\n\nJSON:")
+  // Now let's test encoding and decoding
+  val user = User(1, "bjartur", "bis@famly.co")
+
+  // Encoding the user to JSON string
+  val jsonString: String = user.asJson.toString()
+  println("\n\nJSON:\n")
   println(s"$jsonString\n")
 
-  // Decoding JSON back to Order
-  val decodedOrder = decode[Order](jsonString)
-  println("\n\nDecoded:")
-  decodedOrder match {
-    case Right(order) => println(s"Decoded order: $order")
+  // Decoding from a JSON string, assuming the JSON is missing email
+  val decodedUser = decode[User]("""{"id": 1, "username": "Aske"}""")
+
+  decodedUser match {
+    case Right(user) => println(s"Decoded user: $user")
     case Left(error) => println(s"Failed to decode: $error")
   }
-  println("\n\n")
-
-
 }

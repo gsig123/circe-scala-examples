@@ -1,0 +1,21 @@
+java.lang.ArrayIndexOutOfBoundsException
+occurred in the presentation compiler.
+
+action parameters:
+offset: 182
+uri: file://<WORKSPACE>/src/main/scala/Main.scala
+text:
+import io.circe._
+import io.circe.generic.semiauto._
+import io.circe.syntax._
+import io.circe.parser._
+
+
+object Main extends App {
+  // Define a case class
+  case class User(id: Int,@@)
+}
+
+
+error stacktrace:
+
