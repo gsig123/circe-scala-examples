@@ -1,23 +1,26 @@
-import io.circe._, io.circe.generic.auto._, io.circe.parser._, io.circe.syntax._
+import io.circe.generic.auto._
+import io.circe.syntax._
+import io.circe.parser._
 
 
 object Main extends App {
 
-  sealed trait Foo
-  case class Bar(xs: Vector[String]) extends Foo
-  case class Qux(i: Int, d: Option[Double]) extends Foo
+  // Define some case classes
+  case class Address(street: String, city: String)
+  case class Person(name: String, age: Int, address: Address)
 
-  val foo: Foo = Qux(13, Some(14.00))
-  val json = foo.asJson.noSpaces
+  // Create an instance of Person
+  val person = Person("Bjartur", 29, Address("Ørestads Boulevard", "Copenhagen"))
 
-  println("\n\n\n")
-  println("\n\n\n")
+  // Automatically Encode the Person instance to JSON
+  val json = person.asJson
+  println("\nJSON:")
+  println(s"\n$json \n")
 
-  println(s"JSON: $json \n")
 
-  val decodedFoo = decode[Foo](json)
-  println(s"Scala case class: $decodedFoo \n")
-
-  println("\n\n\n")
+  val jsonString: String = """{"name": "Anders", "age": 19, "address": {"street": "Country road", "city": "Bogø"}}"""
+  val decodedPerson = decode[Person](jsonString)
+  println("\nCase class:")
+  println(s"\n$decodedPerson\n")
 
 }

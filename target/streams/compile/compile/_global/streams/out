@@ -1,19 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/Users/bis/talks/scala_json/how-to-json-in-scala/src/main/scala/Main.scala:1:11: object circe is not a member of package io[0m
-[0m[[0m[31merror[0m] [0m[0mimport io.circe._, io.circe.generic.auto._, io.circe.parser._, io.circe.syntax._[0m
-[0m[[0m[31merror[0m] [0m[0m          ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/bis/talks/scala_json/how-to-json-in-scala/src/main/scala/Main.scala:1:23: object circe is not a member of package io[0m
-[0m[[0m[31merror[0m] [0m[0mimport io.circe._, io.circe.generic.auto._, io.circe.parser._, io.circe.syntax._[0m
-[0m[[0m[31merror[0m] [0m[0m                      ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/bis/talks/scala_json/how-to-json-in-scala/src/main/scala/Main.scala:1:48: object circe is not a member of package io[0m
-[0m[[0m[31merror[0m] [0m[0mimport io.circe._, io.circe.generic.auto._, io.circe.parser._, io.circe.syntax._[0m
-[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/bis/talks/scala_json/how-to-json-in-scala/src/main/scala/Main.scala:1:67: object circe is not a member of package io[0m
-[0m[[0m[31merror[0m] [0m[0mimport io.circe._, io.circe.generic.auto._, io.circe.parser._, io.circe.syntax._[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                  ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/bis/talks/scala_json/how-to-json-in-scala/src/main/scala/Main.scala:11:18: value asJson is not a member of Main.Foo[0m
-[0m[[0m[31merror[0m] [0m[0m  val json = foo.asJson.noSpaces[0m
-[0m[[0m[31merror[0m] [0m[0m                 ^[0m
-[0m[[0m[31merror[0m] [0m[0m/Users/bis/talks/scala_json/how-to-json-in-scala/src/main/scala/Main.scala:15:20: not found: value decode[0m
-[0m[[0m[31merror[0m] [0m[0m  val decodedFoo = decode[Foo](json)[0m
-[0m[[0m[31merror[0m] [0m[0m                   ^[0m
-[0m[[0m[31merror[0m] [0m[0m6 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/bis/talks/scala_json/how-to-json-in-scala/src/main/scala/Main.scala:24:16: not found: value decodePerson[0m
+[0m[[0m[31merror[0m] [0m[0m  println(s"\n$decodePerson")[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

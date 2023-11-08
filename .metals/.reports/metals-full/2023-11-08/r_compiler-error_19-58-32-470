@@ -1,0 +1,9 @@
+scala.reflect.internal.Symbols$CyclicReference: illegal cyclic reference involving value person
+occurred in the presentation compiler.
+
+action parameters:
+<NONE>
+
+
+error stacktrace:
+
